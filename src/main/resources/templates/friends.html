@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en"
+xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni-net</title>
+
+    <link rel="stylesheet" href="/friends.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <img class="logo" src="/img/logo.png" href="profile" alt="">
+            <!-- <div class="navbar"> -->
+            <nav class="nav">
+                <a class="nav__link" href="main">Басты бет</a>
+                <a class="nav__link" href="news">Жаңалықтар</a>
+                <a class="nav__link" href="products">Хабарландыру</a>
+                <a class="nav__link" href="friends">Достар</a>
+                <!--        <a class="nav__link" href="mezuns">Тізім</a>-->
+            </nav>
+
+            <div class="buttons">
+                <button class="btn">
+                    <a href="profile"><i><img src="/img/user.png" alt=""></i></a>
+                </button>
+                <button class="brn">
+                    <i>lang</i>
+                </button>
+
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+</header>
+
+
+<div class="container">
+    <form action="" class="search-bar">
+        <input type="text" placeholder="Іздеу" name="a">
+        <button type="submit"><img src="/img/search-.png" alt=""></button>
+    </form>
+</div>
+
+
+
+<div  class="list-students">
+    <div class="title">
+        <table>
+            <tr>
+                <th>Аватар</th>
+                <th>Аты-жөні</th>
+                <th>Факультет</th>
+                <th>Оқу бітірген жыл</th>
+                <!-- <th>Actions</th> -->
+            </tr>
+        </table>
+    </div>
+    <!-- <a href="add-mezun.html">мезун енгізу</a> -->
+    <div th:each="el : ${students}" class="list-item">
+        <div class="info-text">
+            <table>
+
+                <tr>
+                    <td><img src="/img/essay.jpg" alt="avatar"></td>
+                    <td th:text="${el.firstName} + ' ' + ${el.lastName}">Жарылқасын Ернар </td>
+                    <td th:text="${el.faculty}">  Бухгалтер </td>
+                    <td th:text="${el.gradYear}">  2007 </td>
+
+
+
+                </tr>
+            </table>
+        </div>
+        <div class="action_btns">
+            <table>
+<!--                <td><a th:href = "@{/students/{id}(id=${student.id})}"-->
+<!--                       class = "add_btn">Өшіру</a></td>-->
+
+<!--                <td>-->
+
+<!--                    <a  th:href = "@{/students/{id}(id=${student.id})}" class = "add_btn">Өшіру</a>-->
+<!--                    <a class = "message_btn">Хабарлама</a>-->
+
+<!--                </td>-->
+
+
+                <td><a class = "add_btn">Өшіру</a></td>
+                <td><a href="message" class = "message_btn">Хабарлама</a></td>
+            </table>
+        </div>
+    </div>
+
+
+
+
+    </div>
+</div>
+
+<!-- <div class ="container">
+    <div class = "row">
+        <h1> List Students </h1>
+    </div>
+
+    <div class = "row">
+        <div class = "col-lg-3">
+            <a th:href = "@{/students/new}" class = "btn btn-primary btn-sm mb-3"> Add Student</a>
+        </div>
+    </div>
+    <table class = "table table-striped table-bordered">
+        <thead class = "table-dark">
+            <tr>
+                <th>  First Name</th>
+                <th>  Last Name</th>
+                <th>  Email </th>
+                <th>  Phone Number </th>
+                <th>  Faculty </th>
+                <th>  Graduation Year </th>
+                <th> Actions </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each = "student: ${students}">
+                <td th:text = "${student.firstName}"></td>
+                <td th:text = "${student.lastName}"></td>
+                <td th:text = "${student.email}"></td>
+                <td th:text = "${student.phoneNum}"></td>
+                <td th:text = "${student.faculty}"></td>
+                <td th:text = "${student.gradYear}"></td>
+                <td>
+                    <a th:href = "@{/students/edit/{id}(id=${student.id})}"
+                     class = "btn btn-primary">Update</a>
+
+                    <a th:href = "@{/students/{id}(id=${student.id})}"
+                     class = "btn btn-danger">Delete</a>
+
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</div> -->
+
+<footer class="footer">
+    <h1>Alumni-net</h1>
+    <div class="social-container">
+        <a href="https://www.instagram.com/jihc.kz/" target="_blank"><img src="img/social-icons/instagram.png" alt=""></a>
+        <a href="#"><img src="img/social-icons/telegram.png" alt=""></a>
+        <a href="#"><img src="img/social-icons/whatsapp.png" alt=""></a>
+    </div>
+</footer>
+
+</body>
+</html>

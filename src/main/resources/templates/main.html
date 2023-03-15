@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alumni-net</title>
+
+  <link rel="stylesheet" href="/main.css " >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+<!--<my-header></my-header>-->
+
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <img class="logo" src="/img/logo.png" href="profile" alt="">
+      <!-- <div class="navbar"> -->
+      <nav class="nav">
+        <a class="nav__link" href="main">Басты бет</a>
+        <a class="nav__link" href="news">Жаңалықтар</a>
+        <a class="nav__link" href="products">Хабарландыру</a>
+        <a class="nav__link" href="friends">Достар</a>
+        <!--        <a class="nav__link" href="mezuns">Тізім</a>-->
+      </nav>
+
+      <div class="buttons">
+        <button class="btn">
+          <a href="profile"><i><img src="/img/user.png" alt=""></i></a>
+        </button>
+        <button class="brn">
+          <i>lang</i>
+        </button>
+      </div>
+
+    </div>
+    <!-- </div> -->
+  </div>
+</header>
+
+<div class="intro">
+  <div class="container">
+    <div class="imgcollege">
+      <img class="college-img" src="https://avatars.mds.yandex.net/get-altay/3926074/2a000001758b878ffa5eedaf2538dd0e358c/XXL" alt="">
+    </div>
+    <div class="textabout">
+      <div class="about">
+        <p style="font-size: 36px; color: #333333; font-weight: 700;">Alumni-net</p>
+        <p class="Alnet">Alumni-net сайты оқу орнын аяқтаған түлекке басқада түлектермен байланысқа шығуға ыңғайлы платформа.
+          Сайт арқылы бірнеше мүмкіндіктерді қолдана аласыз.
+          Түлектер бір-бірімен байланысқа шығуы, жұмыс табу, ыңғайлы пәтер, қолжетімді техника және әртүрлі бағыттағы қайырымдылық шаралары. </p>
+      </div>
+      <div class="loginbtns" >
+        <a class="bir" href="/login">Жүйеге кіру</a>
+        <a class="eki" href="/registration">Тіркелу</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="news_block">
+  <div class="news"><h4>Жаңалықтар</h4></div>
+  <div class="newscollege" >
+    <div class="firstt">
+      <a  href="news" style="cursor: pointer;">
+        <div  href="news" class="first">
+          <img class="firstnewsimg" src="/img/shal-cover.jpg" alt="">
+
+          <div class="firstnewstext">
+            <h2 >Тәжірибелі мамандардан кеңес алу</h2>
+            <p >IT оқу практика аясында студенттер мен компанияда тәжірибесі бар программисттер арасында кезекті кездесу болды.
+            </p>
+          </div>
+        </div></a>
+    </div>
+    <div class="groupsecond">
+      <a  style="cursor: pointer;">
+      <div href="news" class="second">
+        <img class="secondnewsimg" src="/img/techcup.JPG" alt="">
+        <div class="secondnewstext">
+          <h2 >Almaty-TechCup</h2>
+          <p >IT оқу практика аясында студенттер мен компанияда тәжірибесі бар программисттер арасында кезекті кездесу болды.
+          </p>
+        </div>
+      </div></a>
+
+      <div class="groupthird">
+        <a  style="cursor: pointer;">
+          <div href="news" class="third">
+          <img class="thirdnewsimg" src="/img/alnur.jpg" alt="">
+          <div class="thirdnewstext">
+            <h2 >Almaty-TechCup</h2>
+            <p >Almaty-TechCup жарысы жайлы
+            </p>
+          </div>
+          </div></a>
+        <a  href="news" style="cursor: pointer;">
+          <div class="fourth">
+          <img class="fourthnewsimg" src="/img/essay.jpg" alt="">
+          <div class="fourthnewstext">
+            <h2 >Taraz-TechCup</h2>
+<!--            <p >IT оқу практика аясында студенттер мен компанияда тәжірибесі бар программисттер арасында кезекті кездесу болды.-->
+<!--            </p>-->
+          </div>
+          </div></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="stuffblock">
+  <div class="stuff_title"><h4>Колледж ұжымы</h4></div>
+  <div class="stuff">
+    <div class="parent">
+      <div class="child1">
+        <div class="first_employee">
+          <img src="/img/miras.jpg" alt="">
+          <div class="first_employee_text">
+            <h2>Seksenbaev Miras</h2>
+            <p style="text-align: left;">Math teacher</p>
+          </div>
+        </div>
+        <div class="second_employee">
+          <img src="/img/principal.jpg" alt="">
+          <div class="second_employee_text">
+            <h2>Бодаубеков Алишер</h2>
+            <p style="text-align: left;">Колледж директоры</p>
+          </div>
+        </div>
+        <div class="third_employee">
+          <img src="/img/principal.jpg" alt="">
+          <div class="third_employee_text">
+            <h2>Бодаубеков Алишер</h2>
+            <p style="text-align: left;">Колледж директоры</p>
+          </div>
+        </div>
+      </div>
+      <div class="child2">
+        <div class="fourth_employee">
+          <img src="/img/principal.jpg" alt="">
+          <div class="fourth_employee_text">
+            <h2>Бодаубеков Алишер</h2>
+            <p style="text-align: left;">Колледж директоры</p>
+          </div>
+        </div>
+        <div class="fifth_employee">
+          <img src="/img/principal.jpg" alt="">
+          <div class="fifth_employee_text">
+            <h2>Бодаубеков Алишер</h2>
+            <p style="text-align: left;">Колледж директоры</p>
+          </div>
+        </div>
+        <div class="sixth_employee">
+          <img src="/img/principal.jpg" alt="">
+          <div class="sixth_employee_text">
+            <h2>Бодаубеков Алишер</h2>
+            <p style="text-align: left;">Колледж директоры</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <h1>Alumni-net</h1>
+  <div class="social-container">
+    <a href="https://www.instagram.com/jihc.kz/" target="_blank"><img src="img/social-icons/instagram.png" alt=""></a>
+    <a href="#"><img src="/img/social-icons/telegram.png" alt=""></a>
+    <a href="#"><img src="/img/social-icons/whatsapp.png" alt=""></a>
+  </div>
+</footer>
+
+<!--<script type="module" src="/JavaScript/main.js"></script>-->
+
+</body>
+
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alumni-net</title>
+
+  <link rel="stylesheet" href="/sell.css" >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <img class="logo" src="/img/logo.png" href="profile" alt="">
+      <!-- <div class="navbar"> -->
+      <nav class="nav">
+        <a class="nav__link" href="main">Басты бет</a>
+        <a class="nav__link" href="news">Жаңалықтар</a>
+        <a class="nav__link" href="products">Хабарландыру</a>
+        <a class="nav__link" href="friends">Достар</a>
+        <!--        <a class="nav__link" href="mezuns">Тізім</a>-->
+      </nav>
+
+      <div class="buttons">
+        <button class="btn">
+          <a href="profile"><i><img src="/img/user.png" alt=""></i></a>
+        </button>
+        <button class="brn">
+          <i>lang</i>
+        </button>
+
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
+</header>
+
+
+<div class="center">
+  <p>Тауар енгізу</p>
+  <form method="post">
+    <div class="txt_field">
+      <input type="text" name="title" required>
+      <span></span>
+      <label>Аты</label>
+    </div>
+<!--    <div class="txt_field">-->
+<!--      <input type="image" required>-->
+<!--      <span></span>-->
+<!--      <label>Сурет енгізу</label>-->
+<!--    </div>-->
+    <div class="txt_field">
+      <input type="text" name="location" required>
+      <span></span>
+      <label>Аймақ</label>
+    </div>
+    <div class="txt_field">
+      <input type="text" name="description" required>
+      <span></span>
+      <label>Тауар жайында</label>
+    </div>
+    <div class="txt_field">
+      <input type="number" name="price" required>
+      <span></span>
+      <label>Тауар бағасы</label>
+    </div>
+    <!-- <div class="pass">Құпиясөзді ұмытып қалдыңызба?</div> -->
+    <input type="submit" value="Енгізу">
+    <!-- <div class="signup_link">
+        Аккаунтыңыз жоқ па? <a href="#">Тіркелу</a>
+    </div> -->
+  </form>
+</div>
+
+<footer class="footer">
+  <h1>Alumni-net</h1>
+  <div class="social-container">
+    <a href="https://www.instagram.com/jihc.kz/" target="_blank"><img src="img/social-icons/instagram.png" alt=""></a>
+    <a href="#"><img src="img/social-icons/telegram.png" alt=""></a>
+    <a href="#"><img src="img/social-icons/whatsapp.png" alt=""></a>
+  </div>
+</footer>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni-net</title>
+
+    <link rel="stylesheet" href="/product.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <img class="logo" src="/img/logo.png" href="profile" alt="">
+            <!-- <div class="navbar"> -->
+            <nav class="nav">
+                <a class="nav__link" href="main">Басты бет</a>
+                <a class="nav__link" href="news">Жаңалықтар</a>
+                <a class="nav__link" href="products">Хабарландыру</a>
+                <a class="nav__link" href="friends">Достар</a>
+                <!--        <a class="nav__link" href="mezuns">Тізім</a>-->
+            </nav>
+
+            <div class="buttons">
+                <button class="btn">
+                    <a href="profile"><i><img src="/img/user.png" alt=""></i></a>
+                </button>
+                <button class="brn">
+                    <i>lang</i>
+                </button>
+
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+</header>
+
+
+<div class="search-container">
+    <form action="" class="search-bar">
+        <input type="text" placeholder="Іздеу" name="a">
+        <button type="submit"><img src="/img/search-.png" alt=""></button>
+    </form>
+    <a class="add_janalyk" href="products/new">Сату</a>
+</div>
+
+
+
+
+<div th:each="el: ${products}" class="product">
+    <h1 th:text="${el.title}">Тауар атауы:</h1>
+    <h2 th:text="${el.price} + ' ' + '₸' " >Бағасы:</h2>
+
+    <div class="product_info">
+
+
+        <div class="product_images">
+            <img class="main_img" src="img/laptop.jpg" alt="">
+            <div class="secondary_images">
+                <img class="secondary_img" src="/img/laptop.jpg" alt="">
+                <img class="secondary_img" src="/img/laptop.jpg" alt="">
+                <img class="secondary_img" src="/img/laptop.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="information">
+            <p th:text="'Аймақ: '+ ${el.location}"></p>
+            <p th:text="'Атауы: ' + ${el.title}"></p>
+            <p th:text="'Жады: ' + ${el.price}"></p>
+<!--            <p>ОЗУ: 2</p>-->
+<!--            <p>ОС: 2</p>-->
+
+            <div class="action_btns">
+                <a class="button_call" href="#">Қоңырау шалу</a>
+                <a class="button_message" href="#">Хабарлама</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="about_product">
+        <h2 >Тауар жайында:</h2>
+        <p th:text="${el.description}">
+
+            Срочно продам 2х комнатную квартиру в центре(район маг. Океан). Натяжные потолки во всех
+            комнатах, новая сантехника, линолеум, хорошая входная дверь, пласт окна, балкон застеклён, новый
+            дорогой кухонный гарнитур, стол и 4 табурета оставляем, также стенка в зале современная 3метра
+            в хорошем состоянии, имеется подвальное помещение. Квартира очень тёплая. Двор чистый
+            с детской площадкой. Все документы в порядке. Проходит под ипотеку в Банк Центр Кредит.
+        </p>
+        <h4>Автор: <a th:each = "el: ${students}" th:text="${el.firstName} + ' ' + "${el.firstName} href="#">Sovetaly Daniyar</a></h4>
+    </div>
+
+</div>
+
+
+
+
+<footer class="footer">
+    <h1>Alumni-net</h1>
+    <div class="social-container">
+        <a href="https://www.instagram.com/jihc.kz/" target="_blank"><img src="img/social-icons/instagram.png" alt=""></a>
+        <a href="#"><img src="img/social-icons/telegram.png" alt=""></a>
+        <a href="#"><img src="img/social-icons/whatsapp.png" alt=""></a>
+    </div>
+</footer>
+</body>
+</html>
